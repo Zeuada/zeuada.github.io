@@ -9,7 +9,8 @@
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon1.png" rel="icon" />
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
     <link
@@ -37,65 +38,63 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <!-- For Animated Hero Section -->
-    <link
-      rel="Externalcss"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
-    />
-    <!-- jQuery library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/hero.css" />
-    <script src="less.js" type="text/javascript"></script>
-
-    <!-- END of Animated Hero Section -->
+    <!-- =======================================================
+  * Template Name: FlexStart
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   </head>
+
   <body>
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top">
       <div
         class="container-fluid container-xl d-flex align-items-center justify-content-between"
       >
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/img/logo1.png" alt="" />
-          <!-- <span>Zeuada</span> -->
+        <a href="/" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="Zeuada" />
         </a>
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li>
-              <a class="nav-link scrollto active" href="index.html">Home</a>
-            </li>
-            <li><a class="nav-link scrollto" href="#about">About us</a></li>
-            <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
-            <!-- <li><a href="blog.html">Blog</a></li> -->
-            <li class="dropdown">
-              <a href="#services"
-                ><span>Services</span> <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul>
-                <li><a href="#services">Web Development</a></li>
-                <li><a href="#services">App Develepment</a></li>
-                <li><a href="#services">Product Management</a></li>
-                <li><a href="#services">Digital Marketing</a></li>
-                <li><a href="#services">Designing & Branding</a></li>
-                <li><a href="#services">Cloud Services</a></li>
-              </ul>
-            </li>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#services">Services</a></li>
             <li>
               <a class="nav-link scrollto" href="#portfolio">Portfolio</a>
             </li>
-            <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
-            <li>
-              <a
-                class="nav-link scrollto"
-                class="getstarted scrollto"
-                href="#contact"
-                >Contact</a
-              >
-            </li>
-            <!-- <li>
-              <a class="getstarted scrollto" href="#about">Get Started</a>
+            <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            <!-- <li><a href="blog.html">Blog</a></li> -->
+            <!-- <li class="dropdown">
+              <a href="#"
+                ><span>Drop Down</span> <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>Deep Drop Down</span>
+                    <i class="bi bi-chevron-right"></i
+                  ></a>
+                  <ul>
+                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
             </li> -->
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li>
+              <a class="getstarted scrollto" href="#about">Get Started</a>
+            </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -105,20 +104,49 @@
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero">
-      <div class="hero1">
-        <h2 id="hero2">
-          We Build,
-          <div class="mask">
-            <span data-show>Web Apps</span>
-            <span>Mobile Apps</span>
-            <span>UI/Ux</span>
-            <span>Digital Marketing</span>
+    <section id="hero" class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 class="sentence" data-aos="fade-up">
+              Empowering Your Business with
+              <div class="slidingVertical">
+                <span>Innovative Solutions</span>
+                <span>People-first Culture</span>
+                <span>Zeuada</span>
+              </div>
+            </h1>
+            <h2 data-aos="fade-up" data-aos-delay="400">
+              We are a team of innovative and experienced professionals
+              dedicated to delivering top-quality solutions to help your
+              business thrive.
+            </h2>
+            <div data-aos="fade-up" data-aos-delay="600">
+              <div class="text-center text-lg-start">
+                <a
+                  href="#about"
+                  class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center"
+                >
+                  <span>Contact Us</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
           </div>
-        </h2>
+          <div
+            class="col-lg-6 hero-img"
+            data-aos="zoom-out"
+            data-aos-delay="200"
+          >
+            <img
+              src="assets/img/hero-img.png"
+              class="img-fluid animated"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </section>
-
     <!-- End Hero -->
 
     <main id="main">
@@ -133,20 +161,29 @@
             >
               <div class="content">
                 <h3>Who We Are</h3>
-                <h2>
-                  ZEUADA is a multidisciplinary IT services & consulting firm
-                  based in Maharashtra, India.
-                </h2>
+                <h2>We offer modern solutions for growing your business</h2>
                 <p>
-                  <!-- We work together to design, create and its Digital marketing
-                  that we are proud of for folks that we believe in.-->
-                  We have experience in the creative industry, producing
-                  exciting experiences for brands that are smart, as they are
-                  effective.
+                  Welcome to Zeuada, a dynamic and innovative company that
+                  combines cutting-edge technology with a people-first culture.
+                  Our team of experienced professionals specializes in
+                  developing innovative solutions in Node.js, React.js, React
+                  Native, AWS, and Digital Marketing.
+                </p>
+                <p>
+                  At Zeuada, we prioritize delivering high-quality work while
+                  maintaining our commitment to transparency and collaboration
+                  with our clients. With our innovative solutions and expertise,
+                  we strive to exceed our clients' expectations and establish
+                  long-term partnerships based on trust and reliability.
+                </p>
+                <p>
+                  Choose Zeuada for your next project and experience the
+                  difference in quality, innovation, and exceptional customer
+                  service.
                 </p>
                 <div class="text-center text-lg-start">
                   <a
-                    href="#values"
+                    href="#"
                     class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center"
                   >
                     <span>Read More</span>
@@ -169,57 +206,68 @@
       <!-- End About Section -->
 
       <!-- ======= Values Section ======= -->
-      <section id="values" class="values">
+      <section id="features" class="features">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
-            <!-- <h2>Our Values</h2> -->
-            <p>Our Values</p>
+            <h2>Our Values</h2>
+            <p>
+              Discover the Zeuada way: Our values that guide us to build
+              innovative solutions.
+            </p>
           </header>
 
           <div class="row">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="box">
-                <img src="assets/img/values-1.png" class="img-fluid" alt="" />
-                <h3>Leadership Principles</h3>
-                <p>
-                  Our Leadership Principles are more than inspirational wall
-                  hangings. The 7 principles guide our discussions and decisions
-                  every day.
-                </p>
-              </div>
+            <div class="col-lg-6">
+              <img src="assets/img/features.png" class="img-fluid" alt="" />
             </div>
 
-            <div
-              class="col-lg-4 mt-4 mt-lg-0"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="box">
-                <img src="assets/img/values-2.png" class="img-fluid" alt="" />
-                <h3>Our Positions</h3>
-                <p>
-                  While our positions are carefully considered and deeply held,
-                  there is much room for healthy debate and differing opinions.
-                </p>
-              </div>
-            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+              <div class="row align-self-center gy-4">
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3>Collaboration and Partnership</h3>
+                  </div>
+                </div>
 
-            <div
-              class="col-lg-4 mt-4 mt-lg-0"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="box">
-                <img src="assets/img/values-3.png" class="img-fluid" alt="" />
-                <h3>Customer Obsession</h3>
-                <p>
-                  Leaders start with the customer and work backwards. They work
-                  vigorously to earn and keep customer trust. Although leaders
-                  pay attention to competitors, they obsess over customers.
-                </p>
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3>Innovation and Creativity</h3>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3>Integrity and Transparency</h3>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3>Customer Focus</h3>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3>Quality and Excellence</h3>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                  <div class="feature-box d-flex align-items-center">
+                    <i class="bi bi-check"></i>
+                    <h3>Teamwork and Respect</h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- / row -->
         </div>
       </section>
       <!-- End Values Section -->
@@ -234,7 +282,7 @@
                 <div>
                   <span
                     data-purecounter-start="0"
-                    data-purecounter-end="5"
+                    data-purecounter-end="6"
                     data-purecounter-duration="1"
                     class="purecounter"
                   ></span>
@@ -249,7 +297,7 @@
                 <div>
                   <span
                     data-purecounter-start="0"
-                    data-purecounter-end="10"
+                    data-purecounter-end="8"
                     data-purecounter-duration="1"
                     class="purecounter"
                   ></span>
@@ -264,11 +312,11 @@
                 <div>
                   <span
                     data-purecounter-start="0"
-                    data-purecounter-end="30"
+                    data-purecounter-end="850"
                     data-purecounter-duration="1"
                     class="purecounter"
                   ></span>
-                  <p>Hours Of Support</p>
+                  <p>Hours Of Work</p>
                 </div>
               </div>
             </div>
@@ -292,314 +340,16 @@
       </section>
       <!-- End Counts Section -->
 
-      <!-- ======= Features Section ======= -->
-      <!-- <section id="features" class="features">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Features</h2>
-            <p>Laboriosam et omnis fuga quis dolor direda fara</p>
-          </header>
-
-          <div class="row">
-            <div class="col-lg-6">
-              <img src="assets/img/features.png" class="img-fluid" alt="" />
-            </div>
-
-            <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-              <div class="row align-self-center gy-4">
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Eos aspernatur rem</h3>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Facilis neque ipsa</h3>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Volup amet voluptas</h3>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Rerum omnis sint</h3>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Alias possimus</h3>
-                  </div>
-                </div>
-
-                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                  <div class="feature-box d-flex align-items-center">
-                    <i class="bi bi-check"></i>
-                    <h3>Repellendus mollitia</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-      <!-- / row -->
-
-      <!-- Feature Tabs -->
-      <!-- <div class="row feture-tabs" data-aos="fade-up">
-            <div class="col-lg-6">
-              <h3>
-                Neque officiis dolore maiores et exercitationem quae est seda
-                lidera pat claero
-              </h3> -->
-
-      <!-- Tabs -->
-      <!-- <ul class="nav nav-pills mb-3">
-                <li>
-                  <a class="nav-link active" data-bs-toggle="pill" href="#tab1"
-                    >Saepe fuga</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link" data-bs-toggle="pill" href="#tab2"
-                    >Voluptates</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link" data-bs-toggle="pill" href="#tab3"
-                    >Corrupti</a
-                  >
-                </li>
-              </ul> -->
-      <!-- End Tabs -->
-
-      <!-- Tab Content -->
-      <!-- <div class="tab-content">
-                <div class="tab-pane fade show active" id="tab1">
-                  <p>
-                    Consequuntur inventore voluptates consequatur aut vel et.
-                    Eos doloribus expedita. Sapiente atque consequatur minima
-                    nihil quae aspernatur quo suscipit voluptatem.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>
-                      Repudiandae rerum velit modi et officia quasi facilis
-                    </h4>
-                  </div>
-                  <p>
-                    Laborum omnis voluptates voluptas qui sit aliquam
-                    blanditiis. Sapiente minima commodi dolorum non eveniet
-                    magni quaerat nemo et.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                  </div>
-                  <p>
-                    Non quod totam minus repellendus autem sint velit. Rerum
-                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
-                    qui inventore eligendi voluptates nisi at. Dolorem quo
-                    tempora. Quia et perferendis.
-                  </p>
-                </div> -->
-      <!-- End Tab 1 Content -->
-
-      <!-- <div class="tab-pane fade show" id="tab2">
-                  <p>
-                    Consequuntur inventore voluptates consequatur aut vel et.
-                    Eos doloribus expedita. Sapiente atque consequatur minima
-                    nihil quae aspernatur quo suscipit voluptatem.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>
-                      Repudiandae rerum velit modi et officia quasi facilis
-                    </h4>
-                  </div>
-                  <p>
-                    Laborum omnis voluptates voluptas qui sit aliquam
-                    blanditiis. Sapiente minima commodi dolorum non eveniet
-                    magni quaerat nemo et.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                  </div>
-                  <p>
-                    Non quod totam minus repellendus autem sint velit. Rerum
-                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
-                    qui inventore eligendi voluptates nisi at. Dolorem quo
-                    tempora. Quia et perferendis.
-                  </p>
-                </div> -->
-      <!-- End Tab 2 Content -->
-
-      <!-- <div class="tab-pane fade show" id="tab3">
-                  <p>
-                    Consequuntur inventore voluptates consequatur aut vel et.
-                    Eos doloribus expedita. Sapiente atque consequatur minima
-                    nihil quae aspernatur quo suscipit voluptatem.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>
-                      Repudiandae rerum velit modi et officia quasi facilis
-                    </h4>
-                  </div>
-                  <p>
-                    Laborum omnis voluptates voluptas qui sit aliquam
-                    blanditiis. Sapiente minima commodi dolorum non eveniet
-                    magni quaerat nemo et.
-                  </p>
-                  <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                  </div>
-                  <p>
-                    Non quod totam minus repellendus autem sint velit. Rerum
-                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
-                    qui inventore eligendi voluptates nisi at. Dolorem quo
-                    tempora. Quia et perferendis.
-                  </p>
-                </div> -->
-      <!-- End Tab 3 Content -->
-      <!-- </div>
-            </div>
-
-            <div class="col-lg-6">
-              <img src="assets/img/features-2.png" class="img-fluid" alt="" />
-            </div>
-          </div> -->
-      <!-- End Feature Tabs -->
-
-      <!-- Feature Icons -->
-      <!-- <div class="row feature-icons" data-aos="fade-up">
-            <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
-
-            <div class="row">
-              <div
-                class="col-xl-4 text-center"
-                data-aos="fade-right"
-                data-aos-delay="100"
-              >
-                <img
-                  src="assets/img/features-3.png"
-                  class="img-fluid p-4"
-                  alt=""
-                />
-              </div>
-
-              <div class="col-xl-8 d-flex content">
-                <div class="row align-self-center gy-4">
-                  <div class="col-md-6 icon-box" data-aos="fade-up">
-                    <i class="ri-line-chart-line"></i>
-                    <div>
-                      <h4>Corporis voluptates sit</h4>
-                      <p>
-                        Consequuntur sunt aut quasi enim aliquam quae harum
-                        pariatur laboris nisi ut aliquip
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                  >
-                    <i class="ri-stack-line"></i>
-                    <div>
-                      <h4>Ullamco laboris nisi</h4>
-                      <p>
-                        Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
-                    <i class="ri-brush-4-line"></i>
-                    <div>
-                      <h4>Labore consequatur</h4>
-                      <p>
-                        Aut suscipit aut cum nemo deleniti aut omnis. Doloribus
-                        ut maiores omnis facere
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                  >
-                    <i class="ri-magic-line"></i>
-                    <div>
-                      <h4>Beatae veritatis</h4>
-                      <p>
-                        Expedita veritatis consequuntur nihil tempore laudantium
-                        vitae denat pacta
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
-                    <i class="ri-command-line"></i>
-                    <div>
-                      <h4>Molestiae dolor</h4>
-                      <p>
-                        Et fuga et deserunt et enim. Dolorem architecto ratione
-                        tensa raptor marte
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-md-6 icon-box"
-                    data-aos="fade-up"
-                    data-aos-delay="500"
-                  >
-                    <i class="ri-radar-line"></i>
-                    <div>
-                      <h4>Explicabo consectetur</h4>
-                      <p>
-                        Est autem dicta beatae suscipit. Sint veritatis et sit
-                        quasi ab aut inventore
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-      <!-- End Feature Icons -->
-      <!-- </div>
-      </section> -->
-      <!-- End Features Section -->
-
       <!-- ======= Services Section ======= -->
       <section id="services" class="services">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
-            <!-- <h2>Services</h2> -->
-            <p>SERVICES</p>
+            <h2>Services</h2>
+            <p class="mb-3">Explore our Range of Expertise and Services</p>
+            <span
+              >We build software solutions with clean code and engage in all
+              stages of product development.</span
+            >
           </header>
 
           <div class="row gy-4">
@@ -609,15 +359,15 @@
               data-aos-delay="200"
             >
               <div class="service-box blue">
-                <i class="ri-discuss-line icon"></i>
+                <i class="ri-window-line icon"></i>
                 <h3>Web Development</h3>
                 <p>
-                  We craft websites designed with purpose, building with latest
-                  technologies.
+                  We build engaging websites using modern technologies like
+                  React, Angular, Svelt and Vue.
                 </p>
-                <!-- <a href="#" class="read-more"
-                  ><span>Read More</span> <i class="bi bi-arrow-right"></i
-                ></a> -->
+                <a href="#" class="read-more"
+                  ><span>Contact Us</span> <i class="bi bi-arrow-right"></i
+                ></a>
               </div>
             </div>
 
@@ -627,15 +377,15 @@
               data-aos-delay="300"
             >
               <div class="service-box orange">
-                <i class="ri-discuss-line icon"></i>
-                <h3>App Development</h3>
+                <i class="ri-server-line icon"></i>
+                <h3>Backend Development</h3>
                 <p>
-                  Ut autem aut autem non a. Sint sint sit facilis nam iusto
-                  sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
+                  Our experienced team creates scalable backend systems using
+                  Node.js, Python, and Go.
                 </p>
-                <!-- <a href="#" class="read-more"
-                  ><span>Read More</span> <i class="bi bi-arrow-right"></i
-                ></a> -->
+                <a href="#" class="read-more"
+                  ><span>Contact Us</span> <i class="bi bi-arrow-right"></i
+                ></a>
               </div>
             </div>
 
@@ -645,15 +395,15 @@
               data-aos-delay="400"
             >
               <div class="service-box green">
-                <i class="ri-discuss-line icon"></i>
-                <h3>Product Management</h3>
+                <i class="ri-apps-line icon"></i>
+                <h3>App Development</h3>
                 <p>
-                  Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
-                  Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+                  From iOS to Android, we create custom mobile apps using React
+                  Native and Flutter.
                 </p>
-                <!-- <a href="#" class="read-more"
-                  ><span>Read More</span> <i class="bi bi-arrow-right"></i
-                ></a> -->
+                <a href="#" class="read-more"
+                  ><span>Contact Us</span> <i class="bi bi-arrow-right"></i
+                ></a>
               </div>
             </div>
 
@@ -663,15 +413,15 @@
               data-aos-delay="500"
             >
               <div class="service-box red">
-                <i class="ri-discuss-line icon"></i>
+                <i class="ri-store-3-line icon"></i>
                 <h3>Digital Marketing</h3>
                 <p>
-                  Non et temporibus minus omnis sed dolor esse consequatur.
-                  Cupiditate sed error ea fuga sit provident adipisci neque.
+                  We offer comprehensive digital marketing solutions, including
+                  SEO, PPC, and social media marketing.
                 </p>
-                <!-- <a href="#" class="read-more"
-                  ><span>Read More</span> <i class="bi bi-arrow-right"></i
-                ></a> -->
+                <a href="#" class="read-more"
+                  ><span>Contact Us</span> <i class="bi bi-arrow-right"></i
+                ></a>
               </div>
             </div>
 
@@ -681,15 +431,15 @@
               data-aos-delay="600"
             >
               <div class="service-box purple">
-                <i class="ri-discuss-line icon"></i>
+                <i class="ri-pencil-ruler-2-line icon"></i>
                 <h3>Designing & Branding</h3>
                 <p>
-                  Cumque et suscipit saepe. Est maiores autem enim facilis ut
-                  aut ipsam corporis aut. Sed animi at autem alias eius labore.
+                  Our creative team crafts memorable branding and designs
+                  stunning visuals using Adobe Suite and Figma.
                 </p>
-                <!-- <a href="#" class="read-more"
-                  ><span>Read More</span> <i class="bi bi-arrow-right"></i
-                ></a> -->
+                <a href="#" class="read-more"
+                  ><span>Contact Us</span> <i class="bi bi-arrow-right"></i
+                ></a>
               </div>
             </div>
 
@@ -699,317 +449,21 @@
               data-aos-delay="700"
             >
               <div class="service-box pink">
-                <i class="ri-discuss-line icon"></i>
+                <i class="ri-cloud-line icon"></i>
                 <h3>Cloud Services</h3>
                 <p>
-                  Hic molestias ea quibusdam eos. Fugiat enim doloremque aut
-                  neque non et debitis iure. Corrupti recusandae ducimus enim.
+                  We specialize in AWS and Azure cloud services, including cloud
+                  migration, DevOps, and serverless architecture.
                 </p>
-                <!-- <a href="#" class="read-more"
-                  ><span>Read More</span> <i class="bi bi-arrow-right"></i
-                ></a> -->
+                <a href="#" class="read-more"
+                  ><span>Contact Us</span> <i class="bi bi-arrow-right"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- End Services Section -->
-
-      <!-- ======= Pricing Section ======= -->
-      <!-- <section id="pricing" class="pricing">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>Pricing</h2>
-            <p>Check our Pricing</p>
-          </header>
-
-          <div class="row gy-4" data-aos="fade-left">
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="box">
-                <h3 style="color: #07d5c0">Free Plan</h3>
-                <div class="price"><sup>$</sup>0<span> / mo</span></div>
-                <img
-                  src="assets/img/pricing-free.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li class="na">Pharetra massa</li>
-                  <li class="na">Massa ultricies mi</li>
-                </ul>
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="box">
-                <span class="featured">Featured</span>
-                <h3 style="color: #65c600">Starter Plan</h3>
-                <div class="price"><sup>$</sup>19<span> / mo</span></div>
-                <img
-                  src="assets/img/pricing-starter.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li class="na">Massa ultricies mi</li>
-                </ul>
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div class="box">
-                <h3 style="color: #ff901c">Business Plan</h3>
-                <div class="price"><sup>$</sup>29<span> / mo</span></div>
-                <img
-                  src="assets/img/pricing-business.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li>Massa ultricies mi</li>
-                </ul>
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <div class="box">
-                <h3 style="color: #ff0071">Ultimate Plan</h3>
-                <div class="price"><sup>$</sup>49<span> / mo</span></div>
-                <img
-                  src="assets/img/pricing-ultimate.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li>Massa ultricies mi</li>
-                </ul>
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- End Pricing Section -->
-
-      <!-- ======= F.A.Q Section ======= -->
-      <!-- <section id="faq" class="faq">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h2>F.A.Q</h2>
-            <p>Frequently Asked Questions</p>
-          </header>
-
-          <div class="row">
-            <div class="col-lg-6"> -->
-      <!-- F.A.Q List 1-->
-      <!-- <div class="accordion accordion-flush" id="faqlist1">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-1"
-                    >
-                      Non consectetur a erat nam at lectus urna duis?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq-content-1"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div class="accordion-body">
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna
-                      id volutpat lacus laoreet non curabitur gravida. Venenatis
-                      lectus magna fringilla urna porttitor rhoncus dolor purus
-                      non.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-2"
-                    >
-                      Feugiat scelerisque varius morbi enim nunc faucibus a
-                      pellentesque?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq-content-2"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div class="accordion-body">
-                      Dolor sit amet consectetur adipiscing elit pellentesque
-                      habitant morbi. Id interdum velit laoreet id donec
-                      ultrices. Fringilla phasellus faucibus scelerisque
-                      eleifend donec pretium. Est pellentesque elit ullamcorper
-                      dignissim. Mauris ultrices eros in cursus turpis massa
-                      tincidunt dui.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-3"
-                    >
-                      Dolor sit amet consectetur adipiscing elit pellentesque
-                      habitant morbi?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq-content-3"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div class="accordion-body">
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                      sagittis orci. Faucibus pulvinar elementum integer enim.
-                      Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                      tellus pellentesque eu tincidunt. Lectus urna duis
-                      convallis convallis tellus. Urna molestie at elementum eu
-                      facilisis sed odio morbi quis
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6"> -->
-      <!-- F.A.Q List 2-->
-      <!-- <div class="accordion accordion-flush" id="faqlist2">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq2-content-1"
-                    >
-                      Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq2-content-1"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist2"
-                  >
-                    <div class="accordion-body">
-                      Dolor sit amet consectetur adipiscing elit pellentesque
-                      habitant morbi. Id interdum velit laoreet id donec
-                      ultrices. Fringilla phasellus faucibus scelerisque
-                      eleifend donec pretium. Est pellentesque elit ullamcorper
-                      dignissim. Mauris ultrices eros in cursus turpis massa
-                      tincidunt dui.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq2-content-2"
-                    >
-                      Tempus quam pellentesque nec nam aliquam sem et tortor
-                      consequat?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq2-content-2"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist2"
-                  >
-                    <div class="accordion-body">
-                      Molestie a iaculis at erat pellentesque adipiscing
-                      commodo. Dignissim suspendisse in est ante in. Nunc vel
-                      risus commodo viverra maecenas accumsan. Sit amet nisl
-                      suscipit adipiscing bibendum est. Purus gravida quis
-                      blandit turpis cursus in
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq2-content-3"
-                    >
-                      Varius vel pharetra vel turpis nunc eget lorem dolor?
-                    </button>
-                  </h2>
-                  <div
-                    id="faq2-content-3"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faqlist2"
-                  >
-                    <div class="accordion-body">
-                      Laoreet sit amet cursus sit amet dictum sit amet justo.
-                      Mauris vitae ultricies leo integer malesuada nunc vel.
-                      Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                      eget lorem dolor sed. Ut venenatis tellus in metus
-                      vulputate eu scelerisque. Pellentesque diam volutpat
-                      commodo sed egestas egestas fringilla phasellus faucibus.
-                      Nibh tellus molestie nunc non blandit massa enim nec.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- End F.A.Q Section -->
 
       <!-- ======= Portfolio Section ======= -->
       <section id="portfolio" class="portfolio">
@@ -1024,7 +478,6 @@
               <ul id="portfolio-flters">
                 <li data-filter="*" class="filter-active">All</li>
                 <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-card">Card</li>
                 <li data-filter=".filter-web">Web</li>
               </ul>
             </div>
@@ -1038,19 +491,19 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <img
-                  src="assets/img/portfolio/portfolio-1.jpg"
+                  src="assets/img/portfolio/BlackBox.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>App</p>
+                  <h4>BlackBox</h4>
+                  <p>Hotel management system</p>
                   <div class="portfolio-links">
                     <a
-                      href="assets/img/portfolio/portfolio-1.jpg"
+                      href="assets/img/portfolio/BlackBox.png"
                       data-gallery="portfolioGallery"
                       class="portfokio-lightbox"
-                      title="App 1"
+                      title="BlackBox"
                       ><i class="bi bi-plus"></i
                     ></a>
                     <a href="portfolio-details.html" title="More Details"
@@ -1064,19 +517,19 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
                 <img
-                  src="assets/img/portfolio/portfolio-2.jpg"
+                  src="assets/img/portfolio/CA_Office.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
-                  <h4>Web 3</h4>
-                  <p>Web</p>
+                  <h4>CA Office</h4>
+                  <p>CA Office management</p>
                   <div class="portfolio-links">
                     <a
-                      href="assets/img/portfolio/portfolio-2.jpg"
+                      href="assets/img/portfolio/CA_Office.png"
                       data-gallery="portfolioGallery"
                       class="portfokio-lightbox"
-                      title="Web 3"
+                      title="CA Office"
                       ><i class="bi bi-plus"></i
                     ></a>
                     <a href="portfolio-details.html" title="More Details"
@@ -1090,45 +543,19 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <img
-                  src="assets/img/portfolio/portfolio-3.jpg"
+                  src="assets/img/portfolio/Foodie.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>App</p>
+                  <h4>Foodie</h4>
+                  <p>Food posting app</p>
                   <div class="portfolio-links">
                     <a
-                      href="assets/img/portfolio/portfolio-3.jpg"
+                      href="assets/img/portfolio/Foodie.png"
                       data-gallery="portfolioGallery"
                       class="portfokio-lightbox"
-                      title="App 2"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-4.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 2</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-4.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Card 2"
+                      title="Foodie"
                       ><i class="bi bi-plus"></i
                     ></a>
                     <a href="portfolio-details.html" title="More Details"
@@ -1142,123 +569,19 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
                 <img
-                  src="assets/img/portfolio/portfolio-5.jpg"
+                  src="assets/img/portfolio/Weaving_Management.png"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
-                  <h4>Web 2</h4>
-                  <p>Web</p>
+                  <h4>Weaving Management</h4>
+                  <p>Weaving Management System</p>
                   <div class="portfolio-links">
                     <a
-                      href="assets/img/portfolio/portfolio-5.jpg"
+                      href="assets/img/portfolio/Weaving_Management.png"
                       data-gallery="portfolioGallery"
                       class="portfokio-lightbox"
-                      title="Web 2"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-6.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-6.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="App 3"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-7.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 1</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-7.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Card 1"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-8.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 3</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-8.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Card 3"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-9.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Web 3</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-9.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Web 3"
+                      title="Weaving Management"
                       ><i class="bi bi-plus"></i
                     ></a>
                     <a href="portfolio-details.html" title="More Details"
@@ -1274,7 +597,7 @@
       <!-- End Portfolio Section -->
 
       <!-- ======= Testimonials Section ======= -->
-      <!-- <section id="testimonials" class="testimonials">
+      <section id="testimonials" class="testimonials">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
             <h2>Testimonials</h2>
@@ -1297,25 +620,26 @@
                     ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
-                    Proin iaculis purus consequat sem cure digni ssim donec
-                    porttitora entum suscipit rhoncus. Accusantium quam,
-                    ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                    risus at semper.
+                    I had an amazing experience working with Zeuada on my
+                    website development project. Shubham and Afrid were
+                    extremely knowledgeable and helpful, guiding me through
+                    every step of the process. I couldn't be happier with the
+                    final product!
                   </p>
                   <div class="profile mt-auto">
                     <img
-                      src="assets/img/testimonials/testimonials-1.jpg"
+                      src="assets/img/testimonials/testimonials-1.png"
                       class="testimonial-img"
                       alt=""
                     />
-                    <h3>Saul Goodman</h3>
+                    <h3>Atul Shanker</h3>
                     <h4>Ceo &amp; Founder</h4>
                   </div>
                 </div>
-              </div> -->
-      <!-- End testimonial item -->
+              </div>
+              <!-- End testimonial item -->
 
-      <!-- <div class="swiper-slide">
+              <div class="swiper-slide">
                 <div class="testimonial-item">
                   <div class="stars">
                     <i class="bi bi-star-fill"></i
@@ -1325,25 +649,24 @@
                     ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
-                    Export tempor illum tamen malis malis eram quae irure esse
-                    labore quem cillum quid cillum eram malis quorum velit fore
-                    eram velit sunt aliqua noster fugiat irure amet legam anim
-                    culpa.
+                    Pranav, the frontend developer at Zeuada, did an excellent
+                    job on our project. He was able to take our vision and turn
+                    it into a beautiful design that exceeded our expectations.
                   </p>
                   <div class="profile mt-auto">
                     <img
-                      src="assets/img/testimonials/testimonials-2.jpg"
+                      src="assets/img/testimonials/testimonials-2.png"
                       class="testimonial-img"
                       alt=""
                     />
-                    <h3>Sara Wilsson</h3>
+                    <h3>Seema Balakrishnan</h3>
                     <h4>Designer</h4>
                   </div>
                 </div>
               </div>
               <!-- End testimonial item -->
 
-      <!-- <div class="swiper-slide">
+              <div class="swiper-slide">
                 <div class="testimonial-item">
                   <div class="stars">
                     <i class="bi bi-star-fill"></i
@@ -1353,24 +676,25 @@
                     ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
-                    Enim nisi quem export duis labore cillum quae magna enim
-                    sint quorum nulla quem veniam duis minim tempor labore quem
-                    eram duis noster aute amet eram fore quis sint minim.
+                    I highly recommend Zeuada for their digital marketing
+                    services. They helped me increase my online presence and
+                    reach a wider audience. The team was extremely helpful and
+                    knowledgeable, and always available to answer any questions.
                   </p>
                   <div class="profile mt-auto">
                     <img
-                      src="assets/img/testimonials/testimonials-3.jpg"
+                      src="assets/img/testimonials/testimonials-3.png"
                       class="testimonial-img"
                       alt=""
                     />
-                    <h3>Jena Karlis</h3>
+                    <h3>Tushar Kadakia</h3>
                     <h4>Store Owner</h4>
                   </div>
                 </div>
-              </div> -->
-      <!-- End testimonial item -->
+              </div>
+              <!-- End testimonial item -->
 
-      <!-- <div class="swiper-slide">
+              <div class="swiper-slide">
                 <div class="testimonial-item">
                   <div class="stars">
                     <i class="bi bi-star-fill"></i
@@ -1380,25 +704,26 @@
                     ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                    multos export minim fugiat minim velit minim dolor enim duis
-                    veniam ipsum anim magna sunt elit fore quem dolore labore
-                    illum veniam.
+                    Zeuada's cloud services are top-notch! They helped us move
+                    our infrastructure to the cloud and saved us a lot of money
+                    in the process. Shubham, the tech lead, was very helpful in
+                    guiding us through the migration and ensuring everything was
+                    done properly.
                   </p>
                   <div class="profile mt-auto">
                     <img
-                      src="assets/img/testimonials/testimonials-4.jpg"
+                      src="assets/img/testimonials/testimonials-4.png"
                       class="testimonial-img"
                       alt=""
                     />
-                    <h3>Matt Brandon</h3>
+                    <h3>Chirag Mehra</h3>
                     <h4>Freelancer</h4>
                   </div>
                 </div>
-              </div> -->
-      <!-- End testimonial item -->
+              </div>
+              <!-- End testimonial item -->
 
-      <!-- <div class="swiper-slide">
+              <div class="swiper-slide">
                 <div class="testimonial-item">
                   <div class="stars">
                     <i class="bi bi-star-fill"></i
@@ -1408,32 +733,33 @@
                     ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure
-                    aliqua veniam tempor noster veniam enim culpa labore duis
-                    sunt culpa nulla illum cillum fugiat legam esse veniam culpa
-                    fore nisi cillum quid.
+                    Zeuada's backend development team is top-notch! They were
+                    able to solve some complex issues that other companies
+                    couldn't. Afrid, the project manager, made sure everything
+                    was on track and kept us informed throughout the entire
+                    process.
                   </p>
                   <div class="profile mt-auto">
                     <img
-                      src="assets/img/testimonials/testimonials-5.jpg"
+                      src="assets/img/testimonials/testimonials-5.png"
                       class="testimonial-img"
                       alt=""
                     />
-                    <h3>John Larson</h3>
+                    <h3>Kathryn J. Gee</h3>
                     <h4>Entrepreneur</h4>
                   </div>
                 </div>
-              </div> -->
-      <!-- End testimonial item -->
-      <!-- </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
-      </section>   -->
+      </section>
       <!-- End Testimonials Section -->
 
       <!-- ======= Team Section ======= -->
-      <!-- <section id="team" class="team">
+      <section id="team" class="team">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
             <h2>Team</h2>
@@ -1442,14 +768,14 @@
 
           <div class="row gy-4">
             <div
-              class="col-lg-3 col-md-6 d-flex align-items-stretch"
+              class="col-lg-4 col-md-6 d-flex align-items-stretch"
               data-aos="fade-up"
               data-aos-delay="100"
             >
               <div class="member">
                 <div class="member-img">
                   <img
-                    src="assets/img/team/team-1.jpg"
+                    src="assets/img/team/shubham.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -1461,26 +787,26 @@
                   </div>
                 </div>
                 <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Shubham Lad</h4>
+                  <span>Co-Founder</span>
                   <p>
-                    Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
-                    tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
-                    corporis et voluptate.
+                    Experienced co-founder with a passion for innovation and
+                    driving business growth. Committed to delivering exceptional
+                    results and creating a positive impact.
                   </p>
                 </div>
               </div>
             </div>
 
             <div
-              class="col-lg-3 col-md-6 d-flex align-items-stretch"
+              class="col-lg-4 col-md-6 d-flex align-items-stretch"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <div class="member">
                 <div class="member-img">
                   <img
-                    src="assets/img/team/team-2.jpg"
+                    src="assets/img/team/afrid.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -1492,26 +818,26 @@
                   </div>
                 </div>
                 <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <h4>Afrid Ambi</h4>
+                  <span>Co-Founder</span>
                   <p>
-                    Quo esse repellendus quia id. Est eum et accusantium
-                    pariatur fugit nihil minima suscipit corporis. Voluptate sed
-                    quas reiciendis animi neque sapiente.
+                    My passion for innovation and creativity led me to start my
+                    company. I used my expertise to create a successful business
+                    that provides high-quality services to clients.
                   </p>
                 </div>
               </div>
             </div>
 
             <div
-              class="col-lg-3 col-md-6 d-flex align-items-stretch"
+              class="col-lg-4 col-md-6 d-flex align-items-stretch"
               data-aos="fade-up"
               data-aos-delay="300"
             >
               <div class="member">
                 <div class="member-img">
                   <img
-                    src="assets/img/team/team-3.jpg"
+                    src="assets/img/team/pranav.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -1523,50 +849,18 @@
                   </div>
                 </div>
                 <div class="member-info">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
+                  <h4>Pranav Makote</h4>
+                  <span>Co-Founder</span>
                   <p>
-                    Vero omnis enim consequatur. Voluptas consectetur unde qui
-                    molestiae deserunt. Voluptates enim aut architecto porro
-                    aspernatur molestiae modi.
+                    Engineer by profession and traveller by heart ❤️. Building
+                    Zeuada technologies with passionate co-founders
                   </p>
                 </div>
               </div>
             </div>
-
-            <div
-              class="col-lg-3 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            > -->
-      <!-- <div class="member">
-                <div class="member-img">
-                  <img
-                    src="assets/img/team/team-4.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <p>
-                    Rerum voluptate non adipisci animi distinctio et deserunt
-                    amet voluptas. Quia aut aliquid doloremque ut possimus ipsum
-                    officia.
-                  </p>
-                </div>
-              </div> -->
-      <!-- </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- End Team Section -->
 
       <!-- ======= Clients Section ======= -->
@@ -1724,7 +1018,7 @@
         <div class="container" data-aos="fade-up">
           <header class="section-header">
             <h2>Contact</h2>
-            <p>Contact Us</p>
+            <p>Tell us about your Project</p>
           </header>
 
           <div class="row gy-4">
@@ -1734,23 +1028,21 @@
                   <div class="info-box">
                     <i class="bi bi-geo-alt"></i>
                     <h3>Address</h3>
-                    <p>Ichalkaranji<br />Maharashtra, IND 416115</p>
+                    <p>Ichalkaranji,<br />Maharashtra, IN 416115</p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="info-box">
                     <i class="bi bi-telephone"></i>
                     <h3>Call Us</h3>
-                    <p>
-                      +91 7249148567<br />+91 8308423806 <br />+91 9921621212
-                    </p>
+                    <p>+91 8308423806<br />+91 9921621212</p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="info-box">
                     <i class="bi bi-envelope"></i>
                     <h3>Email Us</h3>
-                    <p>hello@zeuada.com</p>
+                    <p>info@zeuada.com</p>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -1831,38 +1123,20 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-      <!-- <div class="footer-newsletter">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-              <h4>Our Newsletter</h4>
-              <p>
-                Tamen quem nulla quae legam multos aute sint culpa legam noster
-                magna
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <form action="" method="post">
-                <input type="email" name="email" /><input
-                  type="submit"
-                  value="Subscribe"
-                />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <div class="footer-top">
         <div class="container">
           <div class="row gy-4">
             <div class="col-lg-5 col-md-12 footer-info">
-              <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/logo1.png" alt="" />
+              <a href="/" class="logo d-flex align-items-center">
+                <img src="assets/img/logo.png" alt="Zeuada" />
               </a>
               <p>
-                ZEUADA is a multidisciplinary IT services & consulting firm
-                based in Maharashtra, India.
+                At Zeuada, our mission is to build innovative software solutions
+                that help our clients succeed, while fostering a culture of
+                collaboration, continuous learning, and putting people first. We
+                strive to create a positive impact on society through our work
+                and build lasting relationships with our clients and team
+                members.
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -1870,7 +1144,11 @@
                 <a href="#" class="instagram"
                   ><i class="bi bi-instagram"></i
                 ></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a
+                  href="https://www.linkedin.com/company/zeuada"
+                  class="linkedin"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
               </div>
             </div>
 
@@ -1878,8 +1156,7 @@
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="index.html">Home</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Home</a>
                 </li>
                 <li>
                   <i class="bi bi-chevron-right"></i>
@@ -1889,14 +1166,14 @@
                   <i class="bi bi-chevron-right"></i>
                   <a href="#services">Services</a>
                 </li>
-                <!-- <li>
+                <li>
                   <i class="bi bi-chevron-right"></i>
-                  <a href="#">Terms of service</a>
+                  <a href="/terms-sevices">Terms of service</a>
                 </li>
                 <li>
                   <i class="bi bi-chevron-right"></i>
-                  <a href="#">Privacy policy</a>
-                </li> -->
+                  <a href="/privacy-policy">Privacy policy</a>
+                </li>
               </ul>
             </div>
 
@@ -1909,11 +1186,11 @@
                 </li>
                 <li>
                   <i class="bi bi-chevron-right"></i>
-                  <a href="#services">App Development</a>
+                  <a href="#services">Backend Development</a>
                 </li>
                 <li>
                   <i class="bi bi-chevron-right"></i>
-                  <a href="#services">Product Management</a>
+                  <a href="#services">App Development</a>
                 </li>
                 <li>
                   <i class="bi bi-chevron-right"></i>
@@ -1936,11 +1213,11 @@
               <h4>Contact Us</h4>
               <p>
                 Ichalkaranji<br />
-                Maharashtra, IND 416115<br />
+                Maharashtra, 416115<br />
+                India. <br /><br />
                 <strong>Phone:</strong><br />+91 7249148567 <br />+91 8308423806
-                <br />+91 9921621212
-                <br />
-                <strong>Email:</strong> hello@zeuada.com<br />
+                <br />+91 9921621212 <br />
+                <strong>Email:</strong> info@zeuada.com<br />
               </p>
             </div>
           </div>
@@ -1949,12 +1226,15 @@
 
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>zeuada.com</span></strong
+          &copy; Copyright <strong><span>Zeuada</span></strong
           >. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
-          Designed by <a href="https://zeuada.com/">Zeuada</a>
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </footer>
@@ -1977,6 +1257,5 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/hero.js"></script>
   </body>
 </html>

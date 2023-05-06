@@ -2539,6 +2539,19 @@ section {
   }
 }
 
+@media only screen and (max-width: 1366px) {
+  .slidingVertical {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    text-indent: 0px;
+  }
+
+  .sentence {
+    margin-bottom: 50px !important;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .slidingVertical {
     display: flex;
@@ -2549,4 +2562,10 @@ section {
   .sentence {
     margin-bottom: 40px !important;
   }
+}
+
+.credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

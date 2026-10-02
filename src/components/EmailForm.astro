@@ -7,14 +7,15 @@ interface Props {
   button: string;
   action?: string;
   variant?: 'primary' | 'light';
+  size?: 'md' | 'lg';
 }
 
-const { id, label, button, action = '', variant = 'primary' } = Astro.props;
+const { id, label, button, action = '', variant = 'primary', size = 'md' } = Astro.props;
 const configured = action.trim().length > 0;
 ---
 
 <form
-  class="form"
+  class:list={['form', size]}
   action={configured ? action : undefined}
   method={configured ? 'post' : undefined}
   data-unconfigured={configured ? undefined : 'true'}
@@ -33,6 +34,18 @@ const configured = action.trim().length > 0;
     {button}
   </button>
 </form>
+
+<style>
+  .md .btn {
+    padding: 14px 22px;
+  }
+  .lg .input {
+    padding-block: 15px;
+  }
+  .lg .btn {
+    padding: 15px 24px;
+  }
+</style>
 
 <script>
   document.querySelectorAll<HTMLFormElement>('form[data-unconfigured]').forEach((form) => {

@@ -12,12 +12,15 @@ export const site = {
     name: '[Your name]',
     role: 'Founder, Zeuada',
     // Put a square photo in /public (e.g. /public/founder.jpg) and set it to '/founder.jpg'.
-    // While empty, the photo is simply left out.
+    // While empty, a dashed placeholder circle is shown in its place.
     photo: '',
   },
 
   // Shown in the founder section for partners and investors.
   contactEmail: '[your-email]',
+
+  // Full build log page, linked as "See every update". Leave empty ('') to hide the link.
+  buildLogUrl: '',
 
   // Leave a link empty ('') to hide it from the footer.
   socials: {

@@ -94,6 +94,9 @@ const unloop = site.products[0];
   .note {
     max-width: 460px;
   }
+  .panel-copy .lead {
+    line-height: 1.65;
+  }
   .meta {
     display: flex;
     flex-wrap: wrap;
@@ -135,8 +138,9 @@ const unloop = site.products[0];
     border-left: 1px solid var(--line-soft);
   }
   .phone {
+    box-sizing: border-box;
     width: 100%;
-    max-width: 330px;
+    max-width: 380px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -186,6 +190,7 @@ const unloop = site.products[0];
     gap: 8px;
   }
   .prompt-btn {
+    box-sizing: border-box;
     flex: 1 1 120px;
     padding: 12px;
     text-align: center;

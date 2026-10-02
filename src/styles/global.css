@@ -23,12 +23,6 @@
   --gutter: clamp(20px, 5vw, 64px);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 24px;
@@ -45,9 +39,6 @@ body {
   background: var(--obsidian);
   color: var(--text);
   font-family: var(--font-sans);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -90,6 +81,10 @@ svg {
   padding-block: clamp(72px, 9vw, 120px);
 }
 
+.section-pad-sm {
+  padding-block: clamp(72px, 9vw, 112px);
+}
+
 .grid-bg {
   background-image: linear-gradient(#131826 1px, transparent 1px),
     linear-gradient(90deg, #131826 1px, transparent 1px);
@@ -109,7 +104,6 @@ svg {
 
 .h2-sm {
   font-size: clamp(32px, 3.6vw, 44px);
-  line-height: 1.1;
   font-weight: 600;
   letter-spacing: -0.025em;
 }
@@ -124,19 +118,18 @@ svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 24px;
   border-radius: 6px;
   border: 0;
   font: inherit;
   font-size: 16px;
   font-weight: 600;
+  line-height: normal;
   text-decoration: none;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .btn-primary {
+  padding: 16px 26px;
   background: var(--volt);
   color: var(--on-volt);
 }
@@ -147,6 +140,7 @@ svg {
 }
 
 .btn-light {
+  padding: 15px 24px;
   background: var(--text);
   color: var(--obsidian);
 }
@@ -157,6 +151,7 @@ svg {
 }
 
 .btn-ghost {
+  padding: 15px 24px;
   border: 1px solid var(--line-strong);
   color: var(--text);
   font-weight: 500;
@@ -170,12 +165,10 @@ svg {
 .tag {
   font-family: var(--font-mono);
   font-size: 13px;
-  line-height: 1.4;
   color: var(--mist);
   border: 1px solid var(--line-strong);
   border-radius: 6px;
   padding: 5px 10px;
-  white-space: nowrap;
 }
 
 .tag-volt {
@@ -192,14 +185,14 @@ svg {
 .input {
   flex: 1 1 220px;
   min-width: 0;
-  min-height: 48px;
-  padding: 0 16px;
+  padding: 14px 16px;
   background: var(--obsidian);
   border: 1px solid var(--line-strong);
   border-radius: 6px;
   color: var(--text);
   font: inherit;
   font-size: 16px;
+  line-height: normal;
 }
 
 .input::placeholder {

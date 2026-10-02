@@ -3,8 +3,11 @@ import { site } from '../data/site';
 ---
 
 <section id="log" class="section">
-  <div class="container section-pad">
-    <h2 class="h2-sm heading">Build log</h2>
+  <div class="container section-pad-sm">
+    <div class="top">
+      <h2 class="h2-sm">Build log</h2>
+      {site.buildLogUrl && <a class="all" href={site.buildLogUrl}>See every update</a>}
+    </div>
     <ol class="log">
       {
         site.buildLog.map((entry) => (
@@ -22,8 +25,17 @@ import { site } from '../data/site';
 </section>
 
 <style>
-  .heading {
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
     margin-bottom: 32px;
+  }
+  .all {
+    font-size: 16px;
+    text-decoration: none;
   }
   .log {
     margin: 0;

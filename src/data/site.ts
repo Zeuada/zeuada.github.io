@@ -1,6 +1,10 @@
 // Everything you'll want to edit lives in this file.
 // Replace every value in [BRACKETS] before going live.
 
+import founderPortrait from '../assets/founder/portrait.png';
+import founderDoodles from '../assets/founder/doodles.png';
+import founderDoodlesAccent from '../assets/founder/doodles-accent.png';
+
 export const site = {
   name: 'Zeuada',
   tagline: 'Power, engineered.',
@@ -9,24 +13,31 @@ export const site = {
   url: 'https://zeuada.com',
 
   founder: {
-    name: '[Your name]',
+    name: 'Shubham Lad',
     role: 'Founder, Zeuada',
-    // Put a square photo in /public (e.g. /public/founder.jpg) and set it to '/founder.jpg'.
-    // While empty, a dashed placeholder circle is shown in its place.
-    photo: '',
+    // A cut-out with a real transparent background, cropped flat at the bottom edge; it stands on
+    // the section's bottom line. Lives in src/assets so the build converts it to AVIF/WebP.
+    // Set to null to show a dashed placeholder instead.
+    photo: founderPortrait as ImageMetadata | null,
+    // Hand-drawn notes around the photo: white-on-transparent masks on the same canvas as the
+    // photo, tinted grey and blue by CSS. Set to null to show the photo on its own.
+    doodles: { main: founderDoodles, accent: founderDoodlesAccent } as {
+      main: ImageMetadata;
+      accent: ImageMetadata;
+    } | null,
   },
 
   // Shown in the founder section for partners and investors.
-  contactEmail: '[your-email]',
+  contactEmail: 'founder@zeuada.com',
 
   // Full build log page, linked as "See every update". Leave empty ('') to hide the link.
   buildLogUrl: '',
 
   // Leave a link empty ('') to hide it from the footer.
   socials: {
-    x: '',
-    linkedin: '',
-    github: '',
+    x: 'https://x.com/_shulapy',
+    linkedin: 'https://www.linkedin.com/in/shubhamlad/',
+    github: 'https://github.com/shulapy',
   },
 
   // GitHub Pages is static, so forms need an outside service
@@ -52,12 +63,12 @@ export const site = {
   ],
 
   openNumbers: {
-    lastUpdated: '[MONTH 2026]',
+    lastUpdated: '[OCTOBER 2026]',
     items: [
       { value: '1', label: 'Product in testing' },
-      { value: '[N]', label: 'People using Zeuada tools' },
-      { value: '[N]', label: 'Updates shipped' },
-      { value: '[YEAR]', label: 'Building since' },
+      { value: '5', label: 'People using Zeuada tools' },
+      { value: '3', label: 'Updates shipped' },
+      { value: '2026', label: 'Building since' },
     ],
   },
 

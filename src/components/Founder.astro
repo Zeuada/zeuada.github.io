@@ -1,20 +1,42 @@
 ---
+import { Picture, getImage } from 'astro:assets';
 import { site } from '../data/site';
 
 const { founder, contactEmail } = site;
+
+// The doodles are masks: CSS paints them, so their colour follows the theme.
+const ink =
+  founder.photo && founder.doodles
+    ? {
+        main: await getImage({ src: founder.doodles.main, format: 'webp' }),
+        accent: await getImage({ src: founder.doodles.accent, format: 'webp' }),
+      }
+    : null;
+const inkVars = ink ? `--ink: url(${ink.main.src}); --ink-accent: url(${ink.accent.src})` : undefined;
+
+// The notes float around the photo in six groups, each drifting on its own loop. Regions are in
+// doodle-canvas pixels and each one holds whole strokes (no stroke is split between two groups).
+const drift = [
+  { region: [[60, 105], [335, 105], [335, 312], [60, 312]], move: [4, -6, -3, -3, 1.2], t: 9, d: -1, accent: false },
+  { region: [[500, 50], [862, 50], [862, 382], [530, 382], [530, 205], [500, 205]], move: [-5, -4, 3, -7, -1], t: 11, d: -4, accent: true },
+  { region: [[36, 326], [352, 326], [352, 630], [36, 630]], move: [5, 3, 2, -5, -1.4], t: 8, d: -2, accent: true },
+  { region: [[540, 398], [872, 398], [872, 604], [540, 604]], move: [-4, 5, -6, -2, 1], t: 10, d: -6, accent: false },
+  { region: [[8, 676], [205, 676], [205, 1190], [8, 1190]], move: [3, -5, 6, 2, 1.1], t: 12, d: -3, accent: true },
+  { region: [[676, 672], [886, 672], [886, 1190], [676, 1190]], move: [-3, -6, -5, 1, -1.2], t: 9.5, d: -5, accent: true },
+].map(({ region, move: [x1, y1, x2, y2, r], t, d, accent }) => {
+  const { width: w, height: h } = founder.doodles?.main ?? { width: 1, height: 1 };
+  const pct = (x: number, y: number) => `${((x / w) * 100).toFixed(2)}% ${((y / h) * 100).toFixed(2)}%`;
+  const xs = region.map(([x]) => x), ys = region.map(([, y]) => y);
+  const origin = pct((Math.min(...xs) + Math.max(...xs)) / 2, (Math.min(...ys) + Math.max(...ys)) / 2);
+  return {
+    accent,
+    style: `clip-path: polygon(${region.map(([x, y]) => pct(x, y)).join(', ')}); transform-origin: ${origin}; --x1: ${x1}px; --y1: ${y1}px; --x2: ${x2}px; --y2: ${y2}px; --r: ${r}deg; --t: ${t}s; --d: ${d}s`,
+  };
+});
 ---
 
-<section id="founder" class="section">
-  <div class="container section-pad inner">
-    <div class="photo-col">
-      {
-        founder.photo ? (
-          <img class="photo" src={founder.photo} alt={founder.name} width="120" height="120" />
-        ) : (
-          <div class="photo placeholder" aria-hidden="true">[Your photo]</div>
-        )
-      }
-    </div>
+<section id="founder" class="section founder">
+  <div class:list={['container', 'inner', { 'with-photo': founder.photo }]}>
     <div class="text">
       <h2 class="h2-sm heading">From the founder</h2>
       <p class="para">
@@ -29,24 +51,203 @@ const { founder, contactEmail } = site;
         Partners and investors: <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
       </p>
     </div>
+    {
+      founder.photo ? (
+        <figure class="portrait" style={inkVars} data-ink={ink ? '' : undefined}>
+          {ink &&
+            drift.map((group) => (
+              <div class="drift" style={group.style} aria-hidden="true">
+                <div class="ink" />
+                {group.accent && <div class="ink accent" />}
+              </div>
+            ))}
+          <Picture
+            src={founder.photo}
+            alt={`${founder.name}, founder of ${site.name}`}
+            formats={['avif', 'webp']}
+            fallbackFormat="webp"
+            widths={[340, 400, 680, 800]}
+            sizes="(min-width: 1000px) 400px, min(340px, 100vw - 40px)"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      ) : (
+        <div class="photo-col">
+          <div class="photo placeholder" aria-hidden="true">[Your photo]</div>
+        </div>
+      )
+    }
   </div>
 </section>
 
+<script>
+  // Browsers without scroll-driven animations (Firefox today) reveal the doodles once, on entry.
+  const portrait = document.querySelector<HTMLElement>('.portrait[data-ink]');
+  if (
+    portrait &&
+    !CSS.supports('animation-timeline: view()') &&
+    !matchMedia('(prefers-reduced-motion: reduce)').matches &&
+    'IntersectionObserver' in window
+  ) {
+    portrait.classList.add('ink-wait');
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        portrait.classList.remove('ink-wait');
+        io.disconnect();
+      },
+      { threshold: 0.25 },
+    );
+    io.observe(portrait);
+  }
+</script>
+
 <style>
+  /* the backlight reaches past the photo; keep it from widening the page */
+  .founder {
+    overflow-x: clip;
+  }
   .inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 48px;
+    display: grid;
+    gap: 40px;
+    padding-block: clamp(72px, 9vw, 120px);
   }
-  .photo-col {
-    flex: 0 1 280px;
-    min-width: 0;
+  /* the photo stands on the section's bottom line, so no bottom padding */
+  .inner.with-photo {
+    padding-bottom: 0;
   }
+  @media (min-width: 1000px) {
+    .inner {
+      grid-template-columns: 280px minmax(0, 720px);
+      column-gap: 48px;
+    }
+    .inner.with-photo {
+      grid-template-columns: minmax(0, 400px) minmax(0, 720px);
+      column-gap: 80px;
+      align-items: center;
+    }
+    .portrait,
+    .photo-col {
+      grid-area: 1 / 1;
+    }
+    .inner .portrait {
+      max-width: 400px;
+    }
+    .text {
+      grid-area: 1 / 2;
+    }
+  }
+
+  .portrait {
+    position: relative;
+    isolation: isolate;
+    justify-self: center;
+    align-self: end;
+    width: 100%;
+    max-width: 340px;
+    margin: 0;
+  }
+  /* soft backlight behind the torso */
+  .portrait::before {
+    content: '';
+    position: absolute;
+    /* wider than the photo, but fully faded before its edges so no box shows; stops at the
+       section line so it doesn't spill into the next section */
+    inset: -6% -14% 0;
+    z-index: -1;
+    background: radial-gradient(
+      closest-side at 50% 58%,
+      rgba(61, 123, 255, 0.2),
+      rgba(61, 123, 255, 0.07) 55%,
+      transparent
+    );
+  }
+  .portrait :global(img) {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* hand-drawn notes, painted through the doodle masks */
+  .drift {
+    position: absolute;
+    inset: 0;
+  }
+  .ink {
+    position: absolute;
+    inset: 0;
+    background: var(--mist);
+    -webkit-mask: var(--ink) 0 0 / 100% 100% no-repeat;
+    mask: var(--ink) 0 0 / 100% 100% no-repeat;
+    transition:
+      opacity 0.9s ease,
+      translate 0.9s ease;
+  }
+  .ink.accent {
+    background: var(--volt-light);
+    -webkit-mask-image: var(--ink-accent);
+    mask-image: var(--ink-accent);
+  }
+  .ink-wait .ink {
+    opacity: 0;
+    translate: 0 12px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .drift {
+      animation: drift var(--t) ease-in-out var(--d) infinite;
+      will-change: transform;
+    }
+    @supports (animation-timeline: view()) {
+      /* the ink writes itself in left to right, from the moment the photo enters until it reaches
+         the middle of the screen */
+      .ink {
+        mask:
+          var(--ink) 0 0 / 100% 100% no-repeat,
+          linear-gradient(100deg, #000 42%, transparent 58%) 0 0 / 250% 100% no-repeat;
+        mask-composite: intersect;
+        /* longhands on purpose: the minifier would fold a shorthand + timeline into an
+           `animation: ... view()` that browsers reject */
+        animation-name: ink-in;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+      }
+      .ink.accent {
+        mask:
+          var(--ink-accent) 0 0 / 100% 100% no-repeat,
+          linear-gradient(100deg, #000 42%, transparent 58%) 0 0 / 250% 100% no-repeat;
+        mask-composite: intersect;
+        animation-range: cover 12% cover 56%;
+      }
+    }
+  }
+  @keyframes drift {
+    0%,
+    100% {
+      transform: none;
+    }
+    33% {
+      transform: translate(var(--x1), var(--y1)) rotate(var(--r));
+    }
+    66% {
+      transform: translate(var(--x2), var(--y2)) rotate(calc(var(--r) * -0.6));
+    }
+  }
+  @keyframes ink-in {
+    from {
+      opacity: 0;
+      translate: 0 12px;
+      mask-position: 0 0, 100% 0;
+    }
+  }
+
   .photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
   }
   .placeholder {
     display: flex;
@@ -58,7 +259,6 @@ const { founder, contactEmail } = site;
     text-align: center;
   }
   .text {
-    flex: 1 1 520px;
     min-width: 0;
     max-width: 720px;
   }

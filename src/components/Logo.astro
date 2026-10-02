@@ -1,0 +1,27 @@
+---
+// The Zeuada mark, exactly as designed. Do not alter the geometry.
+interface Props {
+  height?: number;
+  onLight?: boolean;
+  label?: string;
+}
+
+const { height = 30, onLight = false, label } = Astro.props;
+const width = Math.round((height * 400) / 467);
+const bar = onLight ? '#0b0d12' : '#eef1f6';
+---
+
+<svg
+  width={width}
+  height={height}
+  viewBox="0 0 400 467"
+  role={label ? 'img' : undefined}
+  aria-label={label}
+  aria-hidden={label ? undefined : 'true'}
+>
+  <rect width="400" height="83" fill={bar}></rect>
+  <path
+    d="M321.362 83L245.904 182.163H362.865L78.6375 383L191.825 267.519H74.8646L321.362 83Z"
+    fill="#3d7bff"></path>
+  <rect y="383" width="400" height="84" fill={bar}></rect>
+</svg>

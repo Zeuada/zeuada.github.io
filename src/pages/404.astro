@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Page not found" noindex>
+  <Header />
+  <main id="main" class="container nf">
+    <p class="code mono">404</p>
+    <h1>This page doesn't exist.</h1>
+    <p class="body">It may have moved, or the link might be wrong.</p>
+    <a class="btn btn-primary" href="/">Back to the homepage</a>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .nf {
+    padding-block: clamp(80px, 12vw, 160px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .code {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--volt-light);
+  }
+  h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+  }
+  .body {
+    margin: 20px 0 36px;
+    font-size: 18px;
+    color: var(--mist);
+  }
+</style>

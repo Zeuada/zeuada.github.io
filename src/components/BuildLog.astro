@@ -1,0 +1,60 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="log" class="section">
+  <div class="container section-pad">
+    <h2 class="h2-sm heading">Build log</h2>
+    <ol class="log">
+      {
+        site.buildLog.map((entry) => (
+          <li class="entry">
+            <p class="date mono">{entry.date}</p>
+            <div class="content">
+              <h3>{entry.title}</h3>
+              <p>{entry.body}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .heading {
+    margin-bottom: 32px;
+  }
+  .log {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .entry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 40px;
+    padding-block: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .date {
+    flex: 0 0 160px;
+    font-size: 14px;
+    color: var(--volt-light);
+  }
+  .content {
+    flex: 1 1 400px;
+    min-width: 0;
+  }
+  h3 {
+    margin-bottom: 8px;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--mist);
+  }
+</style>

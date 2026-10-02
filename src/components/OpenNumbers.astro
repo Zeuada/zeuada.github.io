@@ -1,0 +1,65 @@
+---
+import { site } from '../data/site';
+
+const { lastUpdated, items } = site.openNumbers;
+---
+
+<section class="section">
+  <div class="container section-pad">
+    <div class="top">
+      <h2 class="h2-sm">Open numbers</h2>
+      <p class="updated">Updated monthly. Last update {lastUpdated}.</p>
+    </div>
+    <dl class="grid">
+      {
+        items.map((item) => (
+          <div class="cell">
+            <dt class="label">{item.label}</dt>
+            <dd class="value mono">{item.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>
+
+<style>
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .updated {
+    font-size: 15px;
+    color: var(--dim);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+  .cell {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    padding: 28px 24px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .value {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--text-bright);
+  }
+  .label {
+    font-size: 15px;
+    color: var(--mist);
+  }
+</style>

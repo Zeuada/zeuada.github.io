@@ -1,0 +1,109 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="top" class="section grid-bg">
+  <div class="container hero">
+    <div class="copy">
+      <p class="kicker mono">Independent software studio</p>
+      <h1>Power,<br />engineered.</h1>
+      <p class="sub">
+        {site.name} builds powerful tools, engineers them with care, and shows the work behind every one.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/#unloop">Get early access to Unloop</a>
+        <a class="btn btn-ghost" href="/#log">Read the build log</a>
+      </div>
+    </div>
+
+    <div class="visual">
+      <svg
+        viewBox="0 0 560 560"
+        role="img"
+        aria-label="The Zeuada lightning Z drawn as an engineering diagram"
+      >
+        <circle cx="280" cy="280" r="250" fill="none" stroke="#273049" stroke-dasharray="4 6"></circle>
+        <line x1="0" y1="84" x2="560" y2="84" stroke="#273049" stroke-dasharray="4 6"></line>
+        <line x1="0" y1="476" x2="560" y2="476" stroke="#273049" stroke-dasharray="4 6"></line>
+        <line x1="112" y1="20" x2="112" y2="540" stroke="#273049" stroke-dasharray="4 6"></line>
+        <line x1="448" y1="20" x2="448" y2="540" stroke="#273049" stroke-dasharray="4 6"></line>
+        <line x1="422" y1="104" x2="137" y2="456" stroke="#3a4560"></line>
+        <g transform="translate(112 83.9) scale(0.84)">
+          <rect width="400" height="83" fill="#eef1f6"></rect>
+          <path
+            d="M321.362 83L245.904 182.163H362.865L78.6375 383L191.825 267.519H74.8646L321.362 83Z"
+            fill="#3d7bff"></path>
+          <rect y="383" width="400" height="84" fill="#eef1f6"></rect>
+        </g>
+        <path d="M 341.9 153.6 A 40 40 0 0 0 349.9 177.6" fill="none" stroke="#8fb2ff" stroke-width="1.5"></path>
+        <text x="286" y="180" class="label accent">36.8°</text>
+        <line x1="112" y1="60" x2="448" y2="60" stroke="#7d879b"></line>
+        <line x1="112" y1="54" x2="112" y2="66" stroke="#7d879b"></line>
+        <line x1="448" y1="54" x2="448" y2="66" stroke="#7d879b"></line>
+        <text x="267" y="48" class="label">336</text>
+        <text x="458" y="124" class="label">power</text>
+        <text x="34" y="446" class="label">precision</text>
+        <circle cx="381.9" cy="153.6" r="4" fill="#0b0d12" stroke="#8fb2ff" stroke-width="1.5"></circle>
+        <circle cx="178.1" cy="405.6" r="4" fill="#0b0d12" stroke="#8fb2ff" stroke-width="1.5"></circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 48px;
+    padding-block: clamp(64px, 10vw, 128px) clamp(64px, 9vw, 112px);
+  }
+  .copy {
+    flex: 1 1 540px;
+    min-width: 0;
+  }
+  .kicker {
+    margin-bottom: 28px;
+    font-size: 14px;
+    color: var(--volt-light);
+  }
+  h1 {
+    font-size: clamp(60px, 10.5vw, 144px);
+    line-height: 0.92;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    color: var(--text-bright);
+  }
+  .sub {
+    max-width: 520px;
+    margin-top: 36px;
+    font-size: clamp(18px, 1.6vw, 21px);
+    line-height: 1.55;
+    color: var(--mist);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 40px;
+  }
+  .visual {
+    flex: 1 1 380px;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .visual svg {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+  }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    fill: #7d879b;
+  }
+  .label.accent {
+    fill: #8fb2ff;
+  }
+</style>

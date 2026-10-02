@@ -1,0 +1,51 @@
+---
+import Base from './Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const { title, description, noindex } = Astro.props;
+---
+
+<Base title={title} description={description} noindex={noindex}>
+  <Header />
+  <main id="main" class="container prose">
+    <h1>{title}</h1>
+    <slot />
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .prose {
+    max-width: 760px;
+    padding-block: clamp(56px, 8vw, 96px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  h1 {
+    margin-bottom: 32px;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+  }
+  .prose :global(h2) {
+    margin: 40px 0 12px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .prose :global(p),
+  .prose :global(li) {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-soft);
+  }
+  .prose :global(p + p) {
+    margin-top: 16px;
+  }
+</style>

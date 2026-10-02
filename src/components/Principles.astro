@@ -1,0 +1,67 @@
+---
+const principles = [
+  {
+    title: 'Powerful',
+    body: "It does its one job better than the alternatives. If it doesn't, it doesn't ship.",
+  },
+  {
+    title: 'Engineered',
+    body: 'Fast, light and built native. The whole of Unloop is under 5 MB, because speed is a feature.',
+  },
+  {
+    title: 'Honest',
+    body: 'No dark patterns or engagement tricks. Privacy explained in plain words, not legal fog.',
+  },
+  {
+    title: 'Open',
+    body: 'A public changelog for every product, and real numbers shared as they happen.',
+  },
+];
+---
+
+<section id="build" class="section">
+  <div class="container section-pad">
+    <h2 class="h2 heading">Every product has to pass the same four tests.</h2>
+    <div class="list">
+      {
+        principles.map((p, i) => (
+          <div class:list={['item', { first: i === 0 }]}>
+            <h3>{p.title}</h3>
+            <p>{p.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .heading {
+    max-width: 700px;
+    margin-bottom: 56px;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 32px;
+  }
+  .item {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding-top: 22px;
+    border-top: 2px solid var(--line-strong);
+  }
+  .item.first {
+    border-top-color: var(--volt);
+  }
+  h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--mist);
+  }
+</style>

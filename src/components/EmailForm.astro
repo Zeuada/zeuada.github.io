@@ -1,0 +1,41 @@
+---
+// Email capture form. Posts to an external service when `action` is set;
+// until then it renders but doesn't submit (GitHub Pages can't receive forms).
+interface Props {
+  id: string;
+  label: string;
+  button: string;
+  action?: string;
+  variant?: 'primary' | 'light';
+}
+
+const { id, label, button, action = '', variant = 'primary' } = Astro.props;
+const configured = action.trim().length > 0;
+---
+
+<form
+  class="form"
+  action={configured ? action : undefined}
+  method={configured ? 'post' : undefined}
+  data-unconfigured={configured ? undefined : 'true'}
+>
+  <label for={id} class="sr-only">{label}</label>
+  <input
+    id={id}
+    class="input"
+    type="email"
+    name="email"
+    autocomplete="email"
+    placeholder="you@example.com"
+    required
+  />
+  <button type="submit" class={`btn ${variant === 'light' ? 'btn-light' : 'btn-primary'}`}>
+    {button}
+  </button>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('form[data-unconfigured]').forEach((form) => {
+    form.addEventListener('submit', (event) => event.preventDefault());
+  });
+</script>

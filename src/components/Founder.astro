@@ -1,0 +1,78 @@
+---
+import { site } from '../data/site';
+
+const { founder, contactEmail } = site;
+---
+
+<section id="founder" class="section">
+  <div class="container section-pad inner">
+    {
+      founder.photo && (
+        <div class="photo-col">
+          <img class="photo" src={founder.photo} alt={founder.name} width="120" height="120" />
+        </div>
+      )
+    }
+    <div class="text">
+      <h2 class="h2-sm heading">From the founder</h2>
+      <p class="para">
+        I started Zeuada to build the tools I wanted to exist, and to build them properly. Today it's a
+        one-person studio. That means every line of code, every decision and every number on this page is
+        mine to answer for.
+      </p>
+      <p class="para last">That's the standard. It doesn't change as Zeuada grows.</p>
+      <p class="name">{founder.name}</p>
+      <p class="role">{founder.role}</p>
+      <p class="contact">
+        Partners and investors: <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+  .photo-col {
+    flex: 0 1 280px;
+  }
+  .photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .text {
+    flex: 1 1 520px;
+    min-width: 0;
+    max-width: 720px;
+  }
+  .heading {
+    margin-bottom: 24px;
+  }
+  .para {
+    margin-bottom: 20px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--text-soft);
+  }
+  .para.last {
+    margin-bottom: 32px;
+  }
+  .name {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .role {
+    margin: 4px 0 24px;
+    font-size: 15px;
+    color: var(--dim);
+  }
+  .contact {
+    font-size: 16px;
+    color: var(--mist);
+  }
+</style>

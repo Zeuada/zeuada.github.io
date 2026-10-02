@@ -1,0 +1,45 @@
+---
+import EmailForm from './EmailForm.astro';
+import { site } from '../data/site';
+---
+
+<section class="section grid-bg">
+  <div class="container section-pad inner">
+    <div class="copy">
+      <h2 class="h2">Follow the build.</h2>
+      <p class="sub">One email when something ships. Nothing else.</p>
+    </div>
+    <div class="form-col">
+      <EmailForm
+        id="news-email"
+        label="Email address"
+        button="Subscribe"
+        action={site.forms.newsletterAction}
+        variant="light"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  .copy {
+    flex: 1 1 420px;
+    min-width: 0;
+  }
+  .sub {
+    margin-top: 14px;
+    font-size: 18px;
+    color: var(--mist);
+  }
+  .form-col {
+    flex: 1 1 400px;
+    min-width: 0;
+  }
+</style>

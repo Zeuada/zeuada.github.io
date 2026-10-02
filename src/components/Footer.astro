@@ -1,0 +1,99 @@
+---
+import Logo from './Logo.astro';
+import { site } from '../data/site';
+
+const socials = [
+  { label: 'X', href: site.socials.x },
+  { label: 'LinkedIn', href: site.socials.linkedin },
+  { label: 'GitHub', href: site.socials.github },
+].filter((s) => s.href);
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container top">
+    <div>
+      <a href="/" class="brand" aria-label="Zeuada home">
+        <Logo height={26} />
+        <span class="wordmark">zeuada</span>
+      </a>
+      <p class="tagline">{site.tagline}</p>
+    </div>
+    <nav aria-label="Footer" class="cols">
+      <div class="col">
+        <a href="/#products">Products</a>
+        <a href="/#log">Build log</a>
+        <a href="/#founder">About</a>
+      </div>
+      <div class="col">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href={`mailto:${site.contactEmail}`}>Contact</a>
+      </div>
+      {
+        socials.length > 0 && (
+          <div class="col">
+            {socials.map((s) => (
+              <a href={s.href} rel="me noopener" target="_blank">
+                {s.label}
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </nav>
+  </div>
+  <div class="container bottom">© {year} {site.name}</div>
+</footer>
+
+<style>
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    padding-block: 48px 56px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .wordmark {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .tagline {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--dim);
+  }
+  .cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    font-size: 15px;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .col a {
+    color: var(--mist);
+    text-decoration: none;
+  }
+  .col a:hover {
+    color: var(--text);
+  }
+  .bottom {
+    padding-block: 20px 40px;
+    border-top: 1px solid var(--line-soft);
+    font-size: 14px;
+    color: var(--dim);
+  }
+</style>
